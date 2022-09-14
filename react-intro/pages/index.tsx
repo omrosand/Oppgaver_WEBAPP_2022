@@ -16,7 +16,9 @@ const MyFrontPage: NextPage = () => {
     e.preventDefault();
     const randomNumber = Math.floor(Math.random() * 10);
     console.log(`Clicked! - ${randomNumber} - ${inputValue}`);
-    setPrinted(inputValue);
+    inputValue !== ""
+      ? setPrinted(inputValue)
+      : setPrinted("You didn't type anything..");
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
