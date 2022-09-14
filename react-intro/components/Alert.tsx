@@ -1,10 +1,12 @@
-import { useState } from "react";
-
-export default function Alert({ handleClick, handleChange, inputValue }: any) {
+export default function Alert({
+  handleClickProp,
+  handleChangeProp,
+  inputValue,
+}: any) {
   return (
     <form>
-      <input type="text" value={inputValue} onChange={handleChange} />
-      <button type="submit" onClick={handleClick}>
+      <input type="text" value={inputValue} onChange={handleChangeProp} />
+      <button type="submit" onClick={handleClickProp}>
         I&apos;m a button!
       </button>
     </form>

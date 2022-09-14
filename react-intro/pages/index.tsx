@@ -36,7 +36,7 @@ const MyFrontPage: NextPage = () => {
       {/* Oppgave 6 + 7 */}
       <Food foodList={food} />
       {/* Oppgave 8 + 9 + 10 + 11 */}
-      <Alert handleClick={handleClick} handleChange={handleChange} />
+      <Alert handleClickProp={handleClick} handleChangeProp={handleChange} />
     </>
   );
 };
