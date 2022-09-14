@@ -7,6 +7,7 @@ import Alert from "../components/Alert";
 import { useState } from "react";
 
 const food = ["Pizza", "Hamburger", "Coke"];
+let clickCount = 0;
 
 const MyFrontPage: NextPage = () => {
   const [inputValue, setInputValue] = useState("");
@@ -14,8 +15,8 @@ const MyFrontPage: NextPage = () => {
 
   const handleClick = (e: any) => {
     e.preventDefault();
-    const randomNumber = Math.floor(Math.random() * 10);
-    console.log(`Clicked! - ${randomNumber} - ${inputValue}`);
+    clickCount++;
+    console.log(`Clicked! - ${clickCount} - ${inputValue}`);
     inputValue !== ""
       ? setPrinted(inputValue)
       : setPrinted("You didn't type anything..");
@@ -28,20 +29,19 @@ const MyFrontPage: NextPage = () => {
 
   return (
     <>
-      {/* Oppgave 1 */}
       <MyComponent />
-      {/* Oppgave 2 + 3 */}
       <MyComponent title="It works!" />
-      {/* Oppgave 4 + 5 */}
       <Wrapper styleClass="flex">
         <Title title="Wrapped first child" />
         <Title title="Wrapped second child" />
         <Title title="Wrapped third child" />
       </Wrapper>
-      {/* Oppgave 6 + 7 */}
       <Food foodList={food} />
-      {/* Oppgave 8 + 9 + 10 + 11 */}
-      <Alert handleClickProp={handleClick} handleChangeProp={handleChange} />
+      <Alert
+        handleClickProp={handleClick}
+        handleChangeProp={handleChange}
+        inputValue={inputValue}
+      />
       <p>{printed}</p>
     </>
   );
