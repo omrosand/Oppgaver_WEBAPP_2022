@@ -9,11 +9,14 @@ import { useState } from "react";
 const food = ["Pizza", "Hamburger", "Coke"];
 
 const MyFrontPage: NextPage = () => {
-  const [inputValue, setInputValue] = useState("Type here..");
+  const [inputValue, setInputValue] = useState("");
+  const [printed, setPrinted] = useState("Click button to print..");
+
   const handleClick = (e: any) => {
     e.preventDefault();
     const randomNumber = Math.floor(Math.random() * 10);
     console.log(`Clicked! - ${randomNumber} - ${inputValue}`);
+    setPrinted(inputValue);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -37,6 +40,7 @@ const MyFrontPage: NextPage = () => {
       <Food foodList={food} />
       {/* Oppgave 8 + 9 + 10 + 11 */}
       <Alert handleClickProp={handleClick} handleChangeProp={handleChange} />
+      <p>{printed}</p>
     </>
   );
 };

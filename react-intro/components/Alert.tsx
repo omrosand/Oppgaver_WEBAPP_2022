@@ -4,11 +4,18 @@ export default function Alert({
   inputValue,
 }: any) {
   return (
-    <form>
-      <input type="text" value={inputValue} onChange={handleChangeProp} />
-      <button type="submit" onClick={handleClickProp}>
-        I&apos;m a button!
-      </button>
-    </form>
+    <>
+      <form>
+        <input
+          type="text"
+          placeholder="Type here.."
+          value={inputValue}
+          onChange={handleChangeProp}
+        />
+        <button type="submit" onClick={handleClickProp}>
+          I&apos;m a button!
+        </button>
+      </form>
+    </>
   );
 }
