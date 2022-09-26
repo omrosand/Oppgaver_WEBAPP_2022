@@ -10,7 +10,7 @@ it("should render name input", () => {
   expect(nameInput).toHaveAttribute("type", "text");
 });
 
-it("should pass a valid number as age", () => {
+it("should pass number as age", () => {
   render(<TestMe />);
 
   const ageInput = screen.getByTestId("age");
