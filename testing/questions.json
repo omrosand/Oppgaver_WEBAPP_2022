@@ -1,0 +1,91 @@
+{
+  "questions": [
+    {
+      "title": "Hva er riktig fremgangsmåte å teste på?",
+      "answers": [
+        {
+          "answer": "Én større test som tar for seg alle bruksområder for en funksjon"
+        },
+        {
+          "answer": "Funksjoner trenger ikke å testes da de gjør det de skal"
+        },
+        {
+          "answer": "Vi tester ikke selve funksjonen, men variablene"
+        },
+        {
+          "answer": "Lage tester for hvert bruksområde i en funksjon, for å kunne isolere problemet",
+          "correct": true
+        }
+      ],
+      "helper": {
+        "text": "Det er lurt å kunne bryte ned testene for å lettere identidisere hvor eventuelle problemer i koden ligger"
+      }
+    },
+    {
+      "title": "Hvilket nøkkelord brukes for å gruppere tester med Jest?",
+      "answers": [
+        {
+          "answer": "predict"
+        },
+        {
+          "answer": "group"
+        },
+        {
+          "answer": "describe",
+          "correct": true
+        },
+        {
+          "answer": "attach"
+        }
+      ],
+      "helper": {
+        "text": "Gruppering av tester skaper ryddighet og oversikt."
+      }
+    },
+    {
+      "title": "Hva menes med testdekning?",
+      "answers": [
+        {
+          "answer": "En prosentandel av hvor mange av linjene kode som har blitt kjørt i en eller flere tester",
+          "correct": true
+        },
+        {
+          "answer": "En tabell som viser hvor god dekning man har for å få signal på testene"
+        },
+        {
+          "answer": "En oversikt over hvor mange tester man har laget"
+        },
+        {
+          "answer": "Testdekning er ikke noe, dette er et lurespørsmål"
+        }
+      ],
+      "helper": {
+        "text": "Høy testdekning betyr ikke 100% kodesikkerhet da det ikke er en selvfølge at testene som er skrevet er gode."
+      }
+    },
+    {
+      "title": "Hvordan lages asynkrone tester?",
+      "answers": [
+        {
+          "answer": "Callbacks"
+        },
+        {
+          "answer": "Promises"
+        },
+        {
+          "answer": "setPause"
+        },
+        {
+          "answer": "holdOn og waitUp"
+        },
+        {
+          "answer": "Kan bruke både callbacks og promises",
+          "correct": true
+        }
+      ],
+      "helper": {
+        "text": "En av utfordringene med å teste asynkron funksjonalitet er at en vanlig test vil automatisk avsluttes når den har nådd siste linjen i testen, men da er det ikke sikkert et promise har blitt resolvet/rejectet eller at et callback er blitt kalt."
+      }
+    }
+  ]
+}
