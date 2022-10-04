@@ -1,8 +1,7 @@
 import type { NextPage } from "next";
 import { useState } from "react";
-import About from "../components/about";
-import Contact from "../components/contact";
-import Dropdown from "../components/Dropdown";
+import About from "../components/About";
+import Contact from "../components/Contact";
 import Navbar from "../components/Navbar";
 import Welcome from "../components/Welcome";
 import WeatherInfoType from "../types/WeatherInfoType";
@@ -36,7 +35,7 @@ const weatherInfo: WeatherInfoType[] = [
 
 const Home: NextPage = () => {
   const [page, setPage] = useState(0);
-  const [place, setPlace] = useState("");
+  const [place, setPlace] = useState("Velg sted");
 
   return (
     <>
