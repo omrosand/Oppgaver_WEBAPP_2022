@@ -1,7 +1,10 @@
-const Dropdown = ({ weatherInfo, place, setPlace }: any) => {
-  const updatePlace = (e: any) => {
-    setPlace(e.target.value);
-  };
+import useWeather from "../hooks/useWeather";
+
+const Dropdown = (/*{ weatherInfo, place, setPlace }: any*/) => {
+  // const updatePlace = (e: any) => {
+  //   setPlace(e.target.value);
+  // };
+  const { weatherInfo, place, updatePlace } = useWeather();
 
   return (
     <>

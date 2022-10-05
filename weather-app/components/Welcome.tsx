@@ -1,6 +1,6 @@
 import Dropdown from "./Dropdown";
 
-const Welcome = ({ weatherInfo, place, setPlace }: any) => {
+const Welcome = () => {
   return (
     <>
       <h1>First Price Yr.no</h1>
@@ -11,7 +11,7 @@ const Welcome = ({ weatherInfo, place, setPlace }: any) => {
         Ikke stol på info du får herfra, det er bare jeg som har skrevet
         morsomme verdier. API kall får bli neste gang :-&#41;
       </p>
-      <Dropdown weatherInfo={weatherInfo} place={place} setPlace={setPlace} />
+      <Dropdown />
     </>
   );
 };

@@ -34,6 +34,6 @@ const useWeather = () => {
   const updatePlace = (e: any) => {
     setPlace(e.target.value);
   };
-  return { place, updatePlace, setPlace, weatherInfo };
+  return { place, updatePlace, weatherInfo };
 };
 export default useWeather;

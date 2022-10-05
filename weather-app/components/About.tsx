@@ -1,6 +1,6 @@
 import Dropdown from "./Dropdown";
 
-const About = ({ weatherInfo, place, setPlace }: any) => {
+const About = () => {
   return (
     <>
       <h1>Om oss</h1>
@@ -16,7 +16,7 @@ const About = ({ weatherInfo, place, setPlace }: any) => {
         Curabitur non nunc vitae elit suscipit lacinia id vitae enim. Aliquam
         aliquet sed felis et condimentum.
       </p>
-      <Dropdown weatherInfo={weatherInfo} place={place} setPlace={setPlace} />
+      <Dropdown />
     </>
   );
 };

@@ -4,6 +4,7 @@ import About from "../components/About";
 import Contact from "../components/Contact";
 import Navbar from "../components/Navbar";
 import Welcome from "../components/Welcome";
+import useWeather from "../hooks/useWeather";
 import WeatherInfoType from "../types/WeatherInfoType";
 
 const weatherInfo: WeatherInfoType[] = [
@@ -35,7 +36,7 @@ const weatherInfo: WeatherInfoType[] = [
 
 const Home: NextPage = () => {
   const [page, setPage] = useState(0);
-  const [place, setPlace] = useState("Velg sted");
+  const { place } = useWeather();
 
   return (
     <>
@@ -43,19 +44,11 @@ const Home: NextPage = () => {
         <main>
           {page === 0 ? (
             <>
-              <Welcome
-                weatherInfo={weatherInfo}
-                place={place}
-                setPlace={setPlace}
-              />
+              <Welcome />
             </>
           ) : page === 1 ? (
             <>
-              <About
-                weatherInfo={weatherInfo}
-                place={place}
-                setPlace={setPlace}
-              />
+              <About />
             </>
           ) : page === 2 ? (
             <>
